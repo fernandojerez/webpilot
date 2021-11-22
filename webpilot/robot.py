@@ -106,6 +106,9 @@ def open_chrome(config: WebPilotConfig = WebPilotConfig()):
         arguments.append(
             "--no-default-browser-check --user-data-dir=.webrobot_data")
 
+    if not config.sandboxed:
+        arguments.append('--no-sandbox')
+
     arguments.append(config.url)
 
     process = subprocess.Popen(arguments)

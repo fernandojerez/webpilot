@@ -14,4 +14,5 @@ class WebPilotConfig(BaseModel):
     remote_port: int = _get_free_tcp_port()
     url: str = "about:blank"
     headless: bool = True
+    sandboxed: bool = True
     chrome_executable: str = 'chrome'
