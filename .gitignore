@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+
+dist
+build
 
 .python_modules
+.webpilot_data/
 main.py

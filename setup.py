@@ -1,12 +1,19 @@
 from setuptools import find_packages, setup
+import pathlib
+
+HERE = pathlib.Path(__file__).parent
+README = (HERE / 'README.md').read_text()
 
 setup(
-    name='webrobot',
-    packages=find_packages(include=['webrobot']),
-    version='0.1',
+    name='webpilot',
+    packages=find_packages(include=['webpilot']),
+    version='0.1.0',
     description='Api to control chromium browsers using puppeteer',
-    author='@fernandojerez',
+    long_description=README,
+    long_description_content_type='text/markdown',
+    author='fernandojerez',
     license='Apache',
-    requires=['websockets', 'pydantic', 'beautifulsoup4'],
+    requires=['websocket_client', 'pydantic', 'beautifulsoup4'],
+    install_requires=["websocket_client", 'pydantic', 'beautifulsoup4'],
     test_suite='tests'
 )

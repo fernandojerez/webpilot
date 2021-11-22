@@ -10,7 +10,7 @@ def _get_free_tcp_port() -> int:
     return port
 
 
-class WebRobotConfig(BaseModel):
+class WebPilotConfig(BaseModel):
     remote_port: int = _get_free_tcp_port()
     url: str = "about:blank"
     headless: bool = True

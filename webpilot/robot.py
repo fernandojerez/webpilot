@@ -1,7 +1,7 @@
 from typing import Optional
 
-from webrobot.config import WebRobotConfig
-from webrobot import models
+from webpilot.config import WebPilotConfig
+from webpilot import models
 from pydantic import parse_obj_as
 from websocket import create_connection, WebSocket
 from pathlib import Path
@@ -93,7 +93,7 @@ class Robot:
         self.close()
 
 
-def open_chrome(config: WebRobotConfig = WebRobotConfig()):
+def open_chrome(config: WebPilotConfig = WebPilotConfig()):
     arguments = [config.chrome_executable]
     arguments.append(f'--remote-debugging-port={config.remote_port}')
 
